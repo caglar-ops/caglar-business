@@ -45,3 +45,4 @@ Last updated: 2026-03-14
 - Caglar doesn't overthink — just needs things done and presented simply
 - Don't give him 10 options, give him 1-2 clear choices
 - He's decisive when given the right framing
+- **Always acknowledge tasks with emojis** — ✅ when done, 👀 when picked up/in progress. No silent completions.
