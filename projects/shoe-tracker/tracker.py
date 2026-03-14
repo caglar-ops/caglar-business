@@ -134,7 +134,7 @@ def run():
         send_telegram("\n".join(msg_lines))
         print(f"Sent alert for {len(new_listings)} new listing(s).")
     else:
-        print("No new listings found.")
+        print("No new listings found. Silent — no message sent.")
 
     print("Scan complete.")
 
