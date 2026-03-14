@@ -5,6 +5,7 @@
 - **Pronouns:** _(unknown)_
 - **Location:** Miami, FL
 - **Timezone:** America/New_York (EST/EDT)
+- **Email:** caglar@caglaroner.com (Gmail)
 - **Notes:** First contact via Telegram on 2026-03-14.
 
 ## Context
