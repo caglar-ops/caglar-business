@@ -1,0 +1,8 @@
+{
+  "key_id": "6fc19d7e-6ee3-45eb-bcd7-20331b3dcf13",
+  "private_key_path": ".kalshi-private-key.pem",
+  "api_url": "https://api.kalshi.com/trade-api/v2",
+  "starting_capital": 100,
+  "target_daily_profit": 1,
+  "max_loss_per_trade": 5
+}

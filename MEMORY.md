@@ -8,14 +8,15 @@ Last updated: 2026-03-14
 - First contact: 2026-03-14 via Telegram
 
 ## About Caglar
-- One-man business owner, Miami FL
-- Baby on the way — time-poor, high stress, needs max leverage
-- ADHD — disorganized, prefers simple tasks, one thing at a time
-- Works from wake to sleep
+- One-man business owner, Miami FL (baby on the way)
+- VP of Engineering @ Eight Sleep (direct to CEO, current)
+- 15+ years building revenue-critical platforms (DoorDash $35B payments, Cornerstone OnDemand 85-person org, Microsoft)
+- Expertise: payments, fintech, infrastructure, team scaling, product delivery
+- PhD in Parallel & Distributed Computer Systems
 - Age: 40, weight: 216 lbs (goal: 185 lbs)
 - Shops at Trader Joe's, works out daily
-- Email: caglar@caglaroner.com (Gmail, not yet connected)
-- Tasks scattered: Apple Notes, TextEdit, paper, Google Docs — consolidating to TODO.md
+- ADHD — needs simple, actionable tasks, one at a time
+- Works sunrise to sunset
 
 ## Business Ideas (as of 2026-03-14)
 1. **At-home elder care marketplace** — nurses to client homes, Uber-for-eldercare model
