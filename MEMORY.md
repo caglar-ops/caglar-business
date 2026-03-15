@@ -32,14 +32,25 @@ Last updated: 2026-03-14
 - Nightly build: 11 PM ET daily → I build something for the business (PR to review)
 - Gmail setup reminder: 5 PM today (2026-03-14)
 
+## Setup Complete ✅
+- Brave Search API: active (key: BSAdtjyLovFQSxX0fYDOxzcaWRd2TMw)
+- Tailscale: installed + connected (100.81.189.114)
+- Gmail + Calendar: live via `gog` (caglar@caglaroner.com authenticated)
+- GitHub: authenticated as caglar-ops (token configured)
+- Git: configured globally (user: Donna, email: donna@caglaroner.com)
+
 ## Pending Setup
-- Gmail integration (needs Tailscale sudo install or alternative tunnel)
-- Google Calendar integration
-- Brave Search API key (needed for web search)
-- Kalshi API access
+- Kalshi API access (for trading automation)
+- Professional background info (for AI consulting positioning)
+
+## Automations Running
+- **6:30 AM ET**: Morning briefing (weather + calendar + BBC news) → Telegram
+- **Every 6h**: Email check (important emails only) → Telegram
+- **Every 2h**: Shoe tracker (Manolo Blahnik Hangisi 41.5) → silent unless found
+- **11 PM ET nightly**: Build cycle (AI consulting → elder care → Kalshi → ops) → GitHub PR + Telegram summary
 
 ## Nightly Build Log
-- Nothing built yet — starts tonight 2026-03-14
+- 2026-03-15 11 PM: First nightly build starting
 
 ## Lessons Learned
 - Caglar doesn't overthink — just needs things done and presented simply
