@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Agent Platform - Automate Your Workflow</title>
+    <meta name="description" content="Deploy intelligent AI agents to automate your business workflows. Enterprise-grade, secure, and easy to integrate.">
+    <link rel="stylesheet" href="src/styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <span class="logo-icon">⚙️</span>
+                <span class="logo-text">AI Agent Platform</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#features">Features</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#early-access" class="cta-link">Get Early Access</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span class="gradient-text">Automate Everything</span><br>
+                with Intelligent AI Agents
+            </h1>
+            <p class="hero-subtitle">
+                Deploy powerful AI agents to handle your business workflows. No coding required. Built for scale.
+            </p>
+            <div class="hero-cta">
+                <a href="#early-access" class="btn btn-primary">Get Early Access</a>
+                <a href="#features" class="btn btn-secondary">See How It Works</a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <div class="stat-number">10k+</div>
+                    <div class="stat-label">Workflows Automated</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">99.9%</div>
+                    <div class="stat-label">Uptime Guarantee</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">24/7</div>
+                    <div class="stat-label">Support & Monitoring</div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="hero-shape shape-1"></div>
+            <div class="hero-shape shape-2"></div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <h2 class="section-title">Why Choose Our Platform?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🤖</div>
+                    <h3>Intelligent Automation</h3>
+                    <p>AI agents that learn and adapt to your workflow patterns, continuously improving performance.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔒</div>
+                    <h3>Enterprise Security</h3>
+                    <p>Bank-grade encryption, SOC 2 compliance, and advanced access controls for your data.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Lightning Fast</h3>
+                    <p>Process thousands of tasks per second with our optimized infrastructure.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔌</div>
+                    <h3>Easy Integration</h3>
+                    <p>Connect to 500+ apps and services with pre-built integrations and custom APIs.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>Real-Time Analytics</h3>
+                    <p>Comprehensive dashboards and reporting to track agent performance and ROI.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">👥</div>
+                    <h3>Dedicated Support</h3>
+                    <p>Expert onboarding, training, and support from our world-class team.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Early Access Form Section -->
+    <section class="early-access" id="early-access">
+        <div class="container">
+            <div class="form-container">
+                <h2 class="form-title">Join Our Early Access Program</h2>
+                <p class="form-subtitle">Be among the first to automate your workflows. Limited spots available.</p>
+                
+                <form id="waitlist-form" class="waitlist-form">
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input 
+                            type="email" 
+                            id="email" 
+                            name="email" 
+                            placeholder="your@email.com"
+                            required
+                            autocomplete="email"
+                        >
+                        <span class="error-message" id="email-error"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="company">Company (Optional)</label>
+                        <input 
+                            type="text" 
+                            id="company" 
+                            name="company" 
+                            placeholder="Your Company"
+                            autocomplete="organization"
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="use-case">Tell us your use case</label>
+                        <textarea 
+                            id="use-case" 
+                            name="useCase" 
+                            placeholder="What workflows would you like to automate?"
+                            rows="4"
+                        ></textarea>
+                        <span class="error-message" id="usecase-error"></span>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-large">
+                        <span class="btn-text">Join Early Access</span>
+                        <span class="btn-loader" id="btn-loader" style="display: none;">●●●</span>
+                    </button>
+                    
+                    <div class="form-message success-message" id="success-message" style="display: none;">
+                        ✓ Thank you! Check your email for next steps.
+                    </div>
+                    <div class="form-message error-form-message" id="error-form-message" style="display: none;">
+                        ✗ Something went wrong. Please try again.
+                    </div>
+                </form>
+
+                <p class="form-footer">We respect your privacy. Unsubscribe at any time.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <h2 class="section-title">Simple, Transparent Pricing</h2>
+            <p class="section-subtitle">Choose the plan that fits your needs. All plans include 14-day free trial.</p>
+            
+            <div class="pricing-grid">
+                <!-- Starter Plan -->
+                <div class="pricing-card">
+                    <h3 class="pricing-tier">Starter</h3>
+                    <p class="pricing-description">Perfect for small teams getting started</p>
+                    <div class="pricing-amount">
+                        <span class="currency">$</span>
+                        <span class="price">99</span>
+                        <span class="period">/month</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>✓ Up to 5 AI agents</li>
+                        <li>✓ 10,000 tasks/month</li>
+                        <li>✓ Basic analytics</li>
+                        <li>✓ 5 app integrations</li>
+                        <li>✓ Email support</li>
+                        <li>✗ API access</li>
+                        <li>✗ Custom workflows</li>
+                    </ul>
+                    <button class="btn btn-secondary pricing-btn">Get Started</button>
+                </div>
+
+                <!-- Pro Plan (Featured) -->
+                <div class="pricing-card featured">
+                    <div class="badge">Most Popular</div>
+                    <h3 class="pricing-tier">Pro</h3>
+                    <p class="pricing-description">For growing businesses</p>
+                    <div class="pricing-amount">
+                        <span class="currency">$</span>
+                        <span class="price">299</span>
+                        <span class="period">/month</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>✓ Unlimited AI agents</li>
+                        <li>✓ 100,000 tasks/month</li>
+                        <li>✓ Advanced analytics</li>
+                        <li>✓ 50+ app integrations</li>
+                        <li>✓ Priority support</li>
+                        <li>✓ API access</li>
+                        <li>✓ Custom workflows</li>
+                    </ul>
+                    <button class="btn btn-primary pricing-btn">Get Started</button>
+                </div>
+
+                <!-- Enterprise Plan -->
+                <div class="pricing-card">
+                    <h3 class="pricing-tier">Enterprise</h3>
+                    <p class="pricing-description">For large-scale operations</p>
+                    <div class="pricing-amount">
+                        <span class="custom-price">Custom</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>✓ Unlimited everything</li>
+                        <li>✓ Dedicated infrastructure</li>
+                        <li>✓ Custom integrations</li>
+                        <li>✓ SLA guarantee</li>
+                        <li>✓ 24/7 support & consulting</li>
+                        <li>✓ Advanced security features</li>
+                        <li>✓ On-premise deployment</li>
+                    </ul>
+                    <button class="btn btn-secondary pricing-btn">Contact Sales</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>About Our Platform</h2>
+                    <p>
+                        The AI Agent Platform was built by a team of veteran engineers and AI researchers who realized that automating business workflows shouldn't require a dedicated data science team. We've spent years perfecting our technology to make intelligent automation accessible to everyone.
+                    </p>
+                    <p>
+                        Our mission is simple: empower businesses to focus on what matters most by eliminating repetitive, time-consuming tasks. Whether you're a startup or an enterprise, our platform scales with you.
+                    </p>
+                    <div class="about-highlights">
+                        <div class="highlight">
+                            <strong>Founded</strong> 2024
+                        </div>
+                        <div class="highlight">
+                            <strong>Team</strong> 50+ engineers
+                        </div>
+                        <div class="highlight">
+                            <strong>Clients</strong> 500+ companies
+                        </div>
+                    </div>
+                </div>
+                <div class="about-visual">
+                    <div class="about-shape shape-3"></div>
+                    <div class="about-shape shape-4"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Product</h4>
+                    <ul>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
+                        <li><a href="#">Documentation</a></li>
+                        <li><a href="#">API Reference</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Security</a></li>
+                        <li><a href="#">Compliance</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#">Twitter</a>
+                        <a href="#">LinkedIn</a>
+                        <a href="#">GitHub</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 AI Agent Platform. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="src/script.js"></script>
+</body>
+</html>
