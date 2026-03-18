@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalshi Trading Bot - Live Dashboard</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            color: #e2e8f0;
+            padding: 20px;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        header {
+            margin-bottom: 30px;
+        }
+        
+        h1 {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 5px;
+            color: #fff;
+        }
+        
+        .subtitle {
+            color: #94a3b8;
+            font-size: 14px;
+        }
+        
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .card {
+            background: rgba(30, 41, 59, 0.8);
+            border: 1px solid rgba(100, 116, 139, 0.2);
+            border-radius: 12px;
+            padding: 20px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .card h2 {
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: #94a3b8;
+            margin-bottom: 15px;
+        }
+        
+        .metric {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+        
+        .metric.positive {
+            color: #10b981;
+        }
+        
+        .metric.negative {
+            color: #ef4444;
+        }
+        
+        .metric.neutral {
+            color: #3b82f6;
+        }
+        
+        .sublabel {
+            font-size: 12px;
+            color: #64748b;
+        }
+        
+        .chart-container {
+            grid-column: 1 / -1;
+            background: rgba(30, 41, 59, 0.8);
+            border: 1px solid rgba(100, 116, 139, 0.2);
+            border-radius: 12px;
+            padding: 20px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .chart-container h2 {
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: #94a3b8;
+            margin-bottom: 20px;
+        }
+        
+        .chart {
+            height: 300px;
+            background: rgba(15, 23, 42, 0.5);
+            border-radius: 8px;
+            padding: 20px;
+            display: flex;
+            align-items: flex-end;
+            gap: 4px;
+        }
+        
+        .bar {
+            flex: 1;
+            background: linear-gradient(180deg, #3b82f6 0%, #1e40af 100%);
+            border-radius: 4px 4px 0 0;
+            min-height: 20px;
+            position: relative;
+            cursor: pointer;
+            transition: opacity 0.2s;
+        }
+        
+        .bar:hover {
+            opacity: 0.8;
+        }
+        
+        .bar.positive {
+            background: linear-gradient(180deg, #10b981 0%, #047857 100%);
+        }
+        
+        .bar.negative {
+            background: linear-gradient(180deg, #ef4444 0%, #991b1b 100%);
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 13px;
+        }
+        
+        th {
+            text-align: left;
+            padding: 12px;
+            border-bottom: 1px solid rgba(100, 116, 139, 0.2);
+            color: #94a3b8;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-size: 11px;
+        }
+        
+        td {
+            padding: 12px;
+            border-bottom: 1px solid rgba(100, 116, 139, 0.1);
+        }
+        
+        tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .ticker {
+            font-family: 'Courier New', monospace;
+            font-weight: 600;
+            color: #3b82f6;
+        }
+        
+        .side {
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-weight: 600;
+            font-size: 11px;
+        }
+        
+        .side.buy {
+            background: rgba(16, 185, 129, 0.1);
+            color: #10b981;
+        }
+        
+        .side.sell {
+            background: rgba(239, 68, 68, 0.1);
+            color: #ef4444;
+        }
+        
+        .pnl.positive {
+            color: #10b981;
+            font-weight: 600;
+        }
+        
+        .pnl.negative {
+            color: #ef4444;
+            font-weight: 600;
+        }
+        
+        .gauge-container {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        
+        .gauge {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: conic-gradient(
+                #10b981 0deg,
+                #10b981 180deg,
+                #64748b 180deg,
+                #64748b 360deg
+            );
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        
+        .gauge::after {
+            content: '';
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: rgba(15, 23, 42, 1);
+        }
+        
+        .gauge-text {
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            z-index: 1;
+        }
+        
+        .gauge-text .value {
+            font-size: 24px;
+            font-weight: 700;
+            color: #10b981;
+        }
+        
+        .gauge-text .label {
+            font-size: 11px;
+            color: #94a3b8;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-top: 2px;
+        }
+        
+        .strategy-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        
+        .strategy-item {
+            background: rgba(15, 23, 42, 0.5);
+            border-radius: 8px;
+            padding: 12px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .strategy-name {
+            font-weight: 600;
+            color: #fff;
+        }
+        
+        .strategy-metric {
+            display: flex;
+            gap: 12px;
+            font-size: 12px;
+        }
+        
+        .badge {
+            background: rgba(59, 130, 246, 0.1);
+            color: #3b82f6;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 600;
+        }
+        
+        @media (max-width: 768px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .chart-container {
+                grid-column: auto;
+            }
+            
+            h1 {
+                font-size: 24px;
+            }
+        }
+        
+        .footer {
+            text-align: center;
+            color: #64748b;
+            font-size: 12px;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(100, 116, 139, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🤖 Kalshi Trading Bot</h1>
+            <div class="subtitle">LMSR + Kelly Sizing | Live P&L Dashboard</div>
+        </header>
+        
+        <div class="grid">
+            <!-- Portfolio Overview -->
+            <div class="card">
+                <h2>Total Bankroll</h2>
+                <div class="metric neutral">$100.00</div>
+                <div class="sublabel">Starting capital</div>
+            </div>
+            
+            <div class="card">
+                <h2>Active Capital</h2>
+                <div class="metric neutral">$50.00</div>
+                <div class="sublabel">Currently deployed</div>
+            </div>
+            
+            <div class="card">
+                <h2>Today's P&L</h2>
+                <div class="metric positive">+$12.45</div>
+                <div class="sublabel">12.45% of active capital</div>
+            </div>
+            
+            <!-- Performance Metrics -->
+            <div class="card">
+                <h2>Total Trades</h2>
+                <div class="metric neutral">24</div>
+                <div class="sublabel">This month</div>
+            </div>
+            
+            <div class="card">
+                <h2>Win Rate</h2>
+                <div class="metric positive">58.3%</div>
+                <div class="sublabel">14 wins / 10 losses</div>
+            </div>
+            
+            <div class="card">
+                <h2>Max Drawdown</h2>
+                <div class="metric negative">-8.3%</div>
+                <div class="sublabel">From peak</div>
+            </div>
+            
+            <!-- Daily P&L Chart -->
+            <div class="chart-container">
+                <h2>Daily P&L</h2>
+                <div class="chart">
+                    <div class="bar positive" style="height: 45%;"></div>
+                    <div class="bar negative" style="height: 25%;"></div>
+                    <div class="bar positive" style="height: 55%;"></div>
+                    <div class="bar positive" style="height: 35%;"></div>
+                    <div class="bar positive" style="height: 65%;"></div>
+                    <div class="bar negative" style="height: 15%;"></div>
+                    <div class="bar positive" style="height: 42%;"></div>
+                    <div class="bar positive" style="height: 38%;"></div>
+                    <div class="bar positive" style="height: 50%;"></div>
+                    <div class="bar negative" style="height: 20%;"></div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Current Positions -->
+        <div class="chart-container">
+            <h2>Current Positions</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Market</th>
+                        <th>Side</th>
+                        <th>Entry Price</th>
+                        <th>Current Price</th>
+                        <th>Size</th>
+                        <th>P&L</th>
+                        <th>ROI</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="ticker">TRUMP_2024_WIN</td>
+                        <td><span class="side buy">BUY</span></td>
+                        <td>$0.62</td>
+                        <td>$0.68</td>
+                        <td>$15</td>
+                        <td class="pnl positive">+$0.90</td>
+                        <td class="pnl positive">+6.0%</td>
+                    </tr>
+                    <tr>
+                        <td class="ticker">FED_RATE_CUT</td>
+                        <td><span class="side sell">SELL</span></td>
+                        <td>$0.35</td>
+                        <td>$0.32</td>
+                        <td>$12</td>
+                        <td class="pnl positive">+$0.36</td>
+                        <td class="pnl positive">+3.0%</td>
+                    </tr>
+                    <tr>
+                        <td class="ticker">NVDA_EARNINGS</td>
+                        <td><span class="side buy">BUY</span></td>
+                        <td>$0.58</td>
+                        <td>$0.61</td>
+                        <td>$10</td>
+                        <td class="pnl positive">+$0.30</td>
+                        <td class="pnl positive">+3.0%</td>
+                    </tr>
+                    <tr>
+                        <td class="ticker">CRYPTO_RALLY</td>
+                        <td><span class="side sell">SELL</span></td>
+                        <td>$0.48</td>
+                        <td>$0.44</td>
+                        <td>$8</td>
+                        <td class="pnl positive">+$0.32</td>
+                        <td class="pnl positive">+4.0%</td>
+                    </tr>
+                    <tr>
+                        <td class="ticker">TECH_IPO_SOON</td>
+                        <td><span class="side buy">BUY</span></td>
+                        <td>$0.51</td>
+                        <td>$0.49</td>
+                        <td>$5</td>
+                        <td class="pnl negative">-$0.10</td>
+                        <td class="pnl negative">-2.0%</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <!-- Win Rate & Top Strategies -->
+        <div class="grid">
+            <div class="card">
+                <h2>Win Rate Gauge</h2>
+                <div class="gauge-container">
+                    <div class="gauge">
+                        <div class="gauge-text">
+                            <div class="value">58.3%</div>
+                            <div class="label">Win Rate</div>
+                        </div>
+                    </div>
+                    <div>
+                        <div style="margin-bottom: 8px;">
+                            <strong style="color: #10b981;">14 Wins</strong>
+                            <div style="font-size: 12px; color: #94a3b8;">Profitable trades</div>
+                        </div>
+                        <div>
+                            <strong style="color: #ef4444;">10 Losses</strong>
+                            <div style="font-size: 12px; color: #94a3b8;">Stopped out</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h2>Top Trader Strategies</h2>
+                <div class="strategy-list">
+                    <div class="strategy-item">
+                        <div>
+                            <div class="strategy-name">alice_pro</div>
+                            <div class="sublabel">Volatility play</div>
+                        </div>
+                        <div class="strategy-metric">
+                            <span class="badge">68% WR</span>
+                            <span style="color: #10b981;">+$284</span>
+                        </div>
+                    </div>
+                    <div class="strategy-item">
+                        <div>
+                            <div class="strategy-name">marcus_algo</div>
+                            <div class="sublabel">LMSR arb</div>
+                        </div>
+                        <div class="strategy-metric">
+                            <span class="badge">61% WR</span>
+                            <span style="color: #10b981;">+$156</span>
+                        </div>
+                    </div>
+                    <div class="strategy-item">
+                        <div>
+                            <div class="strategy-name">sam_quant</div>
+                            <div class="sublabel">Sentiment trade</div>
+                        </div>
+                        <div class="strategy-metric">
+                            <span class="badge">55% WR</span>
+                            <span style="color: #10b981;">+$98</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Recent Trades Log -->
+        <div class="chart-container">
+            <h2>Recent Trades</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Time</th>
+                        <th>Market</th>
+                        <th>Side</th>
+                        <th>Price</th>
+                        <th>Size</th>
+                        <th>EV</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>14:32:15</td>
+                        <td class="ticker">TRUMP_2024_WIN</td>
+                        <td><span class="side buy">BUY</span></td>
+                        <td>$0.62</td>
+                        <td>$15</td>
+                        <td style="color: #10b981; font-weight: 600;">+0.045</td>
+                        <td><span class="badge">OPEN</span></td>
+                    </tr>
+                    <tr>
+                        <td>14:18:42</td>
+                        <td class="ticker">FED_RATE_CUT</td>
+                        <td><span class="side sell">SELL</span></td>
+                        <td>$0.35</td>
+                        <td>$12</td>
+                        <td style="color: #10b981; font-weight: 600;">+0.038</td>
+                        <td><span class="badge">OPEN</span></td>
+                    </tr>
+                    <tr>
+                        <td>13:55:08</td>
+                        <td class="ticker">OLD_TRADE_XYZ</td>
+                        <td><span class="side buy">BUY</span></td>
+                        <td>$0.51</td>
+                        <td>$8</td>
+                        <td style="color: #10b981; font-weight: 600;">+0.032</td>
+                        <td><span class="badge" style="background: rgba(16, 185, 129, 0.1); color: #10b981;">CLOSED +3%</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="footer">
+            <p>Last updated: <span id="timestamp">2026-03-18 03:15:42 UTC</span></p>
+            <p style="margin-top: 8px; color: #475569;">Kalshi Trading Bot — LMSR + Kelly Sizing | Starting Capital: $100</p>
+        </div>
+    </div>
+    
+    <script>
+        // Update timestamp
+        function updateTimestamp() {
+            const now = new Date();
+            const timestamp = now.toISOString().replace('T', ' ').substring(0, 19) + ' UTC';
+            document.getElementById('timestamp').textContent = timestamp;
+        }
+        
+        // Auto-refresh every 30 seconds
+        setInterval(updateTimestamp, 1000);
+        updateTimestamp();
+        
+        // In production, fetch real data from API
+        // fetch('/api/portfolio').then(r => r.json()).then(data => {
+        //   updateDashboard(data);
+        // });
+    </script>
+</body>
+</html>
