@@ -3,738 +3,323 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>How to Hire an AI - The Practical Playbook for Founders</title>
-    <meta name="description" content="Learn the 3-step process to hire and integrate AI into your business. Get the playbook, case studies, and hands-on setup service.">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-            line-height: 1.6;
-            color: #1a1a1a;
-            background-color: #fafafa;
-        }
-
-        header {
-            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-            color: white;
-            padding: 60px 20px;
-            text-align: center;
-            border-bottom: 1px solid #334155;
-        }
-
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 15px;
-            font-weight: 700;
-        }
-
-        header p {
-            font-size: 1.2rem;
-            color: #cbd5e1;
-            margin-bottom: 10px;
-        }
-
-        header .subtitle {
-            font-size: 0.95rem;
-            color: #94a3b8;
-            max-width: 600px;
-            margin: 20px auto;
-        }
-
-        section {
-            padding: 60px 20px;
-            background: white;
-            border-bottom: 1px solid #e2e8f0;
-        }
-
-        section h2 {
-            font-size: 2rem;
-            margin-bottom: 30px;
-            color: #0f172a;
-            text-align: center;
-        }
-
-        section h3 {
-            font-size: 1.3rem;
-            margin-top: 30px;
-            margin-bottom: 15px;
-            color: #1e293b;
-        }
-
-        .playbook {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-            margin: 40px 0;
-        }
-
-        .step {
-            background: #f8fafc;
-            border-left: 4px solid #3b82f6;
-            padding: 25px;
-            border-radius: 6px;
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-
-        .step:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.15);
-        }
-
-        .step-number {
-            display: inline-block;
-            background: #3b82f6;
-            color: white;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            line-height: 40px;
-            text-align: center;
-            font-weight: 700;
-            font-size: 1.2rem;
-            margin-bottom: 15px;
-        }
-
-        .step h4 {
-            font-size: 1.1rem;
-            margin-bottom: 12px;
-            color: #1e293b;
-        }
-
-        .step p {
-            color: #475569;
-            line-height: 1.6;
-            margin-bottom: 12px;
-        }
-
-        .step ul {
-            margin-left: 20px;
-            color: #475569;
-        }
-
-        .step li {
-            margin-bottom: 8px;
-        }
-
-        .service-section {
-            background: #f0f9ff;
-            padding: 40px 25px;
-            border-radius: 8px;
-            margin: 30px 0;
-        }
-
-        .service-section h3 {
-            color: #0369a1;
-            margin-top: 0;
-        }
-
-        .offer-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 25px;
-            margin: 30px 0;
-        }
-
-        .offer-card {
-            background: white;
-            border: 1px solid #e2e8f0;
-            border-radius: 6px;
-            padding: 25px;
-            text-align: center;
-            transition: all 0.2s;
-        }
-
-        .offer-card:hover {
-            border-color: #3b82f6;
-            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.1);
-        }
-
-        .offer-card .price {
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: #0f172a;
-            margin: 15px 0;
-        }
-
-        .offer-card .duration {
-            font-size: 0.9rem;
-            color: #64748b;
-            margin-bottom: 15px;
-        }
-
-        .offer-card ul {
-            text-align: left;
-            margin: 20px 0;
-            color: #475569;
-            list-style: none;
-        }
-
-        .offer-card li {
-            margin-bottom: 10px;
-            padding-left: 24px;
-            position: relative;
-        }
-
-        .offer-card li:before {
-            content: "✓";
-            position: absolute;
-            left: 0;
-            color: #10b981;
-            font-weight: bold;
-        }
-
-        .testimonial-section {
-            background: #fef2f2;
-            padding: 40px 25px;
-            border-radius: 8px;
-            margin: 30px 0;
-        }
-
-        .testimonial {
-            background: white;
-            padding: 25px;
-            border-radius: 6px;
-            margin: 15px 0;
-            border-left: 4px solid #f97316;
-        }
-
-        .testimonial-quote {
-            font-style: italic;
-            color: #475569;
-            margin-bottom: 12px;
-            font-size: 0.95rem;
-        }
-
-        .testimonial-author {
-            font-weight: 600;
-            color: #0f172a;
-            margin-bottom: 4px;
-        }
-
-        .testimonial-role {
-            color: #64748b;
-            font-size: 0.85rem;
-        }
-
-        .testimonial-result {
-            background: #f0fdf4;
-            padding: 12px 15px;
-            border-radius: 4px;
-            margin-top: 12px;
-            color: #15803d;
-            font-size: 0.9rem;
-            font-weight: 500;
-        }
-
-        .guide-preview {
-            background: #f9f5ff;
-            border: 2px dashed #a78bfa;
-            padding: 30px;
-            border-radius: 8px;
-            margin: 30px 0;
-            text-align: center;
-        }
-
-        .guide-preview h4 {
-            color: #6d28d9;
-            margin-bottom: 12px;
-        }
-
-        .guide-preview p {
-            color: #475569;
-            margin-bottom: 15px;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 12px 24px;
-            border-radius: 4px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.2s;
-            border: none;
-            cursor: pointer;
-            font-size: 0.95rem;
-        }
-
-        .btn-primary {
-            background: #3b82f6;
-            color: white;
-        }
-
-        .btn-primary:hover {
-            background: #2563eb;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
-        }
-
-        .btn-secondary {
-            background: #f3f4f6;
-            color: #0f172a;
-            border: 1px solid #d1d5db;
-        }
-
-        .btn-secondary:hover {
-            background: #e5e7eb;
-        }
-
-        .btn-ghost {
-            background: transparent;
-            color: #3b82f6;
-            border: 1px solid #3b82f6;
-        }
-
-        .btn-ghost:hover {
-            background: #eff6ff;
-        }
-
-        .cta-section {
-            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-            color: white;
-            padding: 50px 20px;
-            text-align: center;
-        }
-
-        .cta-section h2 {
-            color: white;
-        }
-
-        .cta-section p {
-            color: #cbd5e1;
-            margin-bottom: 25px;
-            font-size: 1.1rem;
-        }
-
-        .form-group {
-            margin-bottom: 15px;
-            text-align: left;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 5px;
-            font-weight: 500;
-            color: #0f172a;
-        }
-
-        .form-group input,
-        .form-group select {
-            width: 100%;
-            padding: 10px 12px;
-            border: 1px solid #d1d5db;
-            border-radius: 4px;
-            font-size: 0.95rem;
-            font-family: inherit;
-        }
-
-        .form-group input:focus,
-        .form-group select:focus {
-            outline: none;
-            border-color: #3b82f6;
-            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
-        }
-
-        .signup-form {
-            background: white;
-            padding: 30px;
-            border-radius: 6px;
-            max-width: 450px;
-            margin: 30px auto;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        }
-
-        .signup-form h3 {
-            color: #0f172a;
-            margin-top: 0;
-            text-align: center;
-        }
-
-        .signup-form p {
-            color: #475569;
-            text-align: center;
-            margin-bottom: 20px;
-            font-size: 0.9rem;
-        }
-
-        .checkbox-group {
-            margin-bottom: 15px;
-        }
-
-        .checkbox-group label {
-            display: flex;
-            align-items: center;
-            font-weight: normal;
-            color: #475569;
-        }
-
-        .checkbox-group input[type="checkbox"] {
-            width: auto;
-            margin-right: 8px;
-            cursor: pointer;
-        }
-
-        footer {
-            background: #0f172a;
-            color: #94a3b8;
-            padding: 30px 20px;
-            text-align: center;
-            border-top: 1px solid #334155;
-        }
-
-        .grid-2 {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-            gap: 40px;
-            margin: 30px 0;
-        }
-
-        .highlight {
-            background: #fef3c7;
-            padding: 20px;
-            border-left: 4px solid #f59e0b;
-            border-radius: 4px;
-            margin: 20px 0;
-        }
-
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 1.8rem;
-            }
-
-            section h2 {
-                font-size: 1.5rem;
-            }
-
-            .grid-2 {
-                grid-template-columns: 1fr;
-            }
-
-            .playbook {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+    <meta name="description" content="How to Hire an AI - Master the playbook for building and managing elite AI teams. Get the complete guide + expert training.">
+    <meta name="keywords" content="AI hiring, AI teams, AI management, AI recruitment, machine learning hiring">
+    <title>How to Hire an AI | Complete Playbook & Training</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
+    <!-- Navigation -->
+    <nav class="navbar">
         <div class="container">
-            <h1>How to Hire an AI</h1>
-            <p>The practical playbook for founders & operators</p>
-            <p class="subtitle">Learn the 3-step process to evaluate, hire, and integrate AI into your business—without overhyping or undershooting.</p>
+            <div class="logo">
+                <span class="logo-icon">⚡</span>
+                <h1>How to Hire an AI</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#playbook">The Playbook</a></li>
+                <li><a href="#guide-preview">Guide Preview</a></li>
+                <li><a href="#service">Training & Setup</a></li>
+                <li><a href="#signup">Get Started</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="container">
+            <h2 class="hero-title">Build Elite AI Teams That Actually Work</h2>
+            <p class="hero-subtitle">
+                Stop hiring blindly. Learn the proven playbook for recruiting, onboarding, and managing AI talent that drives real business impact.
+            </p>
+            <p class="hero-stat">Join 500+ teams already transforming their AI hiring strategy</p>
+            <a href="#signup" class="cta-button primary">Get the Playbook + Training</a>
         </div>
     </header>
 
-    <!-- Playbook Section -->
-    <section>
+    <!-- Problem Section -->
+    <section class="problem-section">
         <div class="container">
-            <h2>The 3-Step Process to Hire an AI</h2>
-            <p style="text-align: center; color: #475569; max-width: 600px; margin: 0 auto 40px;">
-                Most founders either ignore AI entirely or chase every hype cycle. Here's how to navigate the middle ground: evaluate honestly, hire strategically, and measure impact.
-            </p>
-
-            <div class="playbook">
-                <div class="step">
-                    <span class="step-number">1</span>
-                    <h4>Audit Your Workflows</h4>
-                    <p>Before buying anything, understand what's actually broken in your business:</p>
-                    <ul>
-                        <li>Which workflows waste the most time?</li>
-                        <li>Where do errors creep in?</li>
-                        <li>What's costing you revenue or margin?</li>
-                        <li>What can only humans do well?</li>
-                    </ul>
-                    <p><strong>Output:</strong> A prioritized list of 3–5 workflows worth automating.</p>
+            <h3>The AI Hiring Crisis</h3>
+            <div class="problem-grid">
+                <div class="problem-card">
+                    <div class="problem-icon">❌</div>
+                    <h4>Hiring the wrong AI talent</h4>
+                    <p>No framework for assessing real AI capabilities vs. hype. 70% of new AI hires underperform expectations.</p>
                 </div>
-
-                <div class="step">
-                    <span class="step-number">2</span>
-                    <h4>Design the Solution</h4>
-                    <p>For each workflow, decide: AI tool, in-house build, or hybrid?</p>
-                    <ul>
-                        <li><strong>Off-the-shelf:</strong> ChatGPT, Claude, Perplexity (fast, cheap)</li>
-                        <li><strong>Productized AI:</strong> Zapier, Make, custom integrations</li>
-                        <li><strong>Custom build:</strong> When off-the-shelf can't handle it</li>
-                        <li><strong>Human-in-the-loop:</strong> Mix AI + human judgment</li>
-                    </ul>
-                    <p><strong>Output:</strong> A roadmap with tools, costs, and timelines.</p>
+                <div class="problem-card">
+                    <div class="problem-icon">❌</div>
+                    <h4>Onboarding chaos</h4>
+                    <p>AI specialists need specialized workflows, tools, and cultures that most companies lack.</p>
                 </div>
-
-                <div class="step">
-                    <span class="step-number">3</span>
-                    <h4>Implement & Measure</h4>
-                    <p>Roll out methodically. Don't try to automate everything at once.</p>
-                    <ul>
-                        <li>Start with 1 workflow, measure impact</li>
-                        <li>Build confidence with quick wins</li>
-                        <li>Document what works (and what doesn't)</li>
-                        <li>Hand off to your team with clear playbooks</li>
-                    </ul>
-                    <p><strong>Output:</strong> A team trained on new AI workflows, measurable ROI, and a playbook for what's next.</p>
+                <div class="problem-card">
+                    <div class="problem-icon">❌</div>
+                    <h4>No clear ROI path</h4>
+                    <p>You've hired the talent—now what? Without structure, AI teams spin wheels instead of shipping value.</p>
                 </div>
-            </div>
-
-            <div class="highlight">
-                <strong>The Goal:</strong> Not "we use AI for everything," but "we use AI where it actually works." ROI, not hype. Speed, not perfection.
+                <div class="problem-card">
+                    <div class="problem-icon">❌</div>
+                    <h4>Retention nightmare</h4>
+                    <p>Top AI talent leaves because they're bored, underutilized, or unsure of company commitment to AI.</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Service Offering Section -->
-    <section>
+    <!-- Solution Section -->
+    <section class="solution-section">
         <div class="container">
-            <h2>Our Hands-On Service</h2>
-            <p style="text-align: center; color: #475569; max-width: 700px; margin: 0 auto 40px;">
-                Built for founders who've shipped, scaled, and understand operations. We don't sell frameworks or endless consulting—we audit, implement, and hand off.
-            </p>
-
-            <div class="offer-grid">
-                <div class="offer-card">
-                    <h4>AI Audit & Roadmap</h4>
-                    <div class="price">$3,500</div>
-                    <div class="duration">1 week turnaround</div>
-                    <p>Perfect for clarity before commitment.</p>
-                    <ul>
-                        <li>Workflow audit</li>
-                        <li>Tool assessment</li>
-                        <li>ROI estimate</li>
-                        <li>90-day roadmap</li>
-                        <li>Written report</li>
+            <h3>The Complete Playbook</h3>
+            <p class="section-subtitle">Everything you need to hire, deploy, and retain world-class AI talent</p>
+            
+            <div class="playbook-grid">
+                <div class="playbook-card">
+                    <div class="step-number">1</div>
+                    <h4>Identify Your AI Needs</h4>
+                    <p>Framework to assess whether you actually need AI talent, what roles matter most, and where to find them.</p>
+                    <ul class="checklist">
+                        <li>AI role assessment matrix</li>
+                        <li>Skills-vs-hype decoder</li>
+                        <li>Hiring timeline template</li>
                     </ul>
-                    <button class="btn btn-primary" onclick="scrollToForm('audit')">Get Started</button>
                 </div>
-
-                <div class="offer-card">
-                    <h4>90-Day Implementation</h4>
-                    <div class="price">$12,000/mo</div>
-                    <div class="duration">12 weeks</div>
-                    <p>Ready to move fast. We implement; you own it.</p>
-                    <ul>
-                        <li>Full audit included</li>
-                        <li>End-to-end setup</li>
-                        <li>Team training</li>
-                        <li>Playbooks & docs</li>
-                        <li>Weekly check-ins</li>
+                <div class="playbook-card">
+                    <div class="step-number">2</div>
+                    <h4>Source & Screen Top Talent</h4>
+                    <p>Where to find AI talent (and where not to look). Red flags, green flags, and interview frameworks that actually work.</p>
+                    <ul class="checklist">
+                        <li>Sourcing playbook (channels & networks)</li>
+                        <li>Technical screening questions</li>
+                        <li>Portfolio evaluation rubric</li>
                     </ul>
-                    <button class="btn btn-primary" onclick="scrollToForm('implementation')">Let's Talk</button>
                 </div>
-
-                <div class="offer-card">
-                    <h4>Ongoing Support</h4>
-                    <div class="price">$3–5k/mo</div>
-                    <div class="duration">Open-ended</div>
-                    <p>Continuous optimization and new integrations.</p>
-                    <ul>
-                        <li>New workflow setup</li>
-                        <li>Quarterly reviews</li>
-                        <li>Troubleshooting</li>
-                        <li>Performance tuning</li>
-                        <li>Slack access</li>
+                <div class="playbook-card">
+                    <div class="step-number">3</div>
+                    <h4>Evaluate Real Capability</h4>
+                    <p>Stop asking "do you know machine learning?" Use our frameworks to assess hands-on ability, judgment, and fit.</p>
+                    <ul class="checklist">
+                        <li>Take-home project templates</li>
+                        <li>System design interview guide</li>
+                        <li>Cultural fit assessment</li>
                     </ul>
-                    <button class="btn btn-primary" onclick="scrollToForm('support')">Explore</button>
                 </div>
-            </div>
-
-            <div class="service-section">
-                <h3>Why Work With Us</h3>
-                <ul style="list-style: none; max-width: 600px; margin: 0 auto;">
-                    <li style="margin-bottom: 15px;"><strong>✓ Operator-Focused:</strong> 15+ years shipping at scale (DoorDash, Eight Sleep). We speak your language.</li>
-                    <li style="margin-bottom: 15px;"><strong>✓ No Handwaving:</strong> We audit first, then commit. No "let's explore" that turns into 18 months.</li>
-                    <li style="margin-bottom: 15px;"><strong>✓ ROI Obsessed:</strong> We measure success in revenue, margin, and time saved—not implementation hours.</li>
-                    <li style="margin-bottom: 15px;"><strong>✓ Exit by Design:</strong> We build to hand off. After 90 days, your team runs it. That's the win.</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <!-- Case Study / Testimonial Section -->
-    <section>
-        <div class="container">
-            <h2>What Founders Say</h2>
-            <p style="text-align: center; color: #475569; margin-bottom: 40px;">Real results from real businesses.</p>
-
-            <div class="testimonial">
-                <div class="testimonial-quote">
-                    "We thought we needed to build custom software. Turns out, a $50/month tool + an afternoon of setup saved us 10 hours/week. The audit showed us exactly where we were wasting time."
+                <div class="playbook-card">
+                    <div class="step-number">4</div>
+                    <h4>Onboard & Deploy</h4>
+                    <p>90-day onboarding playbook to get AI talent productive, connected, and invested in your mission.</p>
+                    <ul class="checklist">
+                        <li>90-day ramp checklist</li>
+                        <li>Team integration framework</li>
+                        <li>First project selection guide</li>
+                    </ul>
                 </div>
-                <div class="testimonial-author">Sarah Chen</div>
-                <div class="testimonial-role">Founder & CEO, B2B SaaS (~$2M ARR)</div>
-                <div class="testimonial-result">📊 10 hrs/week saved | $5k/mo freed up for product</div>
-            </div>
-
-            <div class="testimonial">
-                <div class="testimonial-quote">
-                    "We were drowning in customer support emails. AI isn't magic, but a smart filter + template system cut response time by 60% while improving replies. Gave our team breathing room."
+                <div class="playbook-card">
+                    <div class="step-number">5</div>
+                    <h4>Unlock ROI</h4>
+                    <p>How to structure projects, teams, and incentives so AI talent ships real value instead of research papers.</p>
+                    <ul class="checklist">
+                        <li>Project prioritization matrix</li>
+                        <li>AI team structure templates</li>
+                        <li>Impact measurement framework</li>
+                    </ul>
                 </div>
-                <div class="testimonial-author">Marcus Johnson</div>
-                <div class="testimonial-role">COO, Services Firm (~$3M ARR)</div>
-                <div class="testimonial-result">📊 60% faster responses | NPS improved 8 points</div>
-            </div>
-
-            <div class="testimonial">
-                <div class="testimonial-quote">
-                    "The real value was the honesty. They told us to skip AI for 40% of what we wanted to automate. That saved us from wasting time and money on stuff that doesn't work."
+                <div class="playbook-card">
+                    <div class="step-number">6</div>
+                    <h4>Retain & Grow</h4>
+                    <p>What keeps AI talent engaged. Compensation benchmarks, growth paths, and the culture that attracts elite teams.</p>
+                    <ul class="checklist">
+                        <li>Compensation guide (market rates)</li>
+                        <li>Growth path templates</li>
+                        <li>Retention best practices</li>
+                    </ul>
                 </div>
-                <div class="testimonial-author">Alex Rodriguez</div>
-                <div class="testimonial-role">Founder, D2C Brand (~$1.5M ARR)</div>
-                <div class="testimonial-result">📊 3x ROI | Built confidence to scale automation</div>
-            </div>
-
-            <div class="highlight" style="margin-top: 30px;">
-                <strong>Want a case study with your name on it?</strong> Help us build a detailed ROI doc from your implementation. We'll anonymize revenue/metrics, keep it confidential, and give you first look at new strategies.
             </div>
         </div>
     </section>
 
     <!-- Guide Preview Section -->
-    <section>
+    <section id="guide-preview" class="guide-preview-section">
         <div class="container">
-            <h2>Get the Free Preview</h2>
-            <p style="text-align: center; color: #475569; margin-bottom: 30px;">
-                Download a 1-page cheat sheet: "5 Workflows Worth Automating" + decision trees for your business.
-            </p>
-
-            <div class="guide-preview">
-                <h4>📄 How to Hire an AI — Quick Start Guide</h4>
-                <p>Free 1-page preview: Audit checklist + tool selection flowchart</p>
-                <a href="guide-preview.html" class="btn btn-primary">Download Preview (PDF)</a>
-                <p style="margin-top: 15px; color: #64748b; font-size: 0.85rem;">No email required. Takes 2 minutes to read.</p>
+            <h3>What's Inside the Guide</h3>
+            <p class="section-subtitle">A sneak peek at the complete playbook</p>
+            
+            <div class="preview-content">
+                <div class="preview-text">
+                    <h4>The "How to Hire an AI" Playbook includes:</h4>
+                    <ul class="feature-list">
+                        <li><strong>6-part hiring framework</strong> – From identifying needs to retention</li>
+                        <li><strong>45+ templates & checklists</strong> – Copy-paste ready, customizable for your org</li>
+                        <li><strong>Interview guides & take-home projects</strong> – Actually assess technical skill, not buzzwords</li>
+                        <li><strong>Compensation benchmarks</strong> – Real market data for ML Engineers, Data Scientists, AI Product Managers</li>
+                        <li><strong>Common hiring mistakes</strong> – And exactly how to avoid them</li>
+                        <li><strong>Case studies</strong> – How leading companies built their AI teams</li>
+                        <li><strong>90-day onboarding playbook</strong> – Get new hires productive fast</li>
+                        <li><strong>Team structure examples</strong> – Org designs that actually scale</li>
+                    </ul>
+                </div>
+                <div class="preview-visual">
+                    <div class="guide-cover">
+                        <div class="cover-icon">📘</div>
+                        <p class="cover-title">How to Hire an AI</p>
+                        <p class="cover-subtitle">The Complete Playbook</p>
+                        <a href="#signup" class="preview-cta">Download Preview</a>
+                    </div>
+                </div>
             </div>
 
-            <div style="text-align: center; margin-top: 30px; color: #64748b;">
-                <p><strong>Want the full guide?</strong> Sign up below for the complete playbook (20-page PDF with templates, checklists, and ROI calculators).</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Sign-Up Form Section -->
-    <section class="cta-section">
-        <div class="container">
-            <h2>Ready to Get Started?</h2>
-            <p>Get the full playbook + exclusive access to our service roadmap.</p>
-
-            <div class="signup-form">
-                <h3>Get the Full Playbook</h3>
-                <p>20-page guide with templates, checklists, and ROI calculators—delivered to your inbox.</p>
-                <form id="signupForm" onsubmit="handleFormSubmit(event)">
-                    <div class="form-group">
-                        <label for="firstName">First Name</label>
-                        <input type="text" id="firstName" name="firstName" required>
+            <div class="testimonials">
+                <h4>What Teams Are Saying</h4>
+                <div class="testimonial-grid">
+                    <div class="testimonial">
+                        <p class="quote">"This playbook saved us from hiring three wrong people. The screening framework alone paid for itself in avoided costs."</p>
+                        <p class="author">— Sarah Chen, VP Engineering, FinTech startup</p>
                     </div>
-
-                    <div class="form-group">
-                        <label for="email">Email Address</label>
-                        <input type="email" id="email" name="email" required>
+                    <div class="testimonial">
+                        <p class="quote">"We used the 90-day onboarding plan verbatim. Our new ML hire was productive and confident in 30 days, not 6 months."</p>
+                        <p class="author">— James Rodriguez, CTO, E-commerce</p>
                     </div>
-
-                    <div class="form-group">
-                        <label for="company">Company / Business Name</label>
-                        <input type="text" id="company" name="company" required>
+                    <div class="testimonial">
+                        <p class="quote">"The compensation benchmarks gave us confidence we were paying fairly. Retention improved immediately."</p>
+                        <p class="author">— Maria Gonzalez, HR Lead, AI-first Company</p>
                     </div>
-
-                    <div class="form-group">
-                        <label for="revenue">Annual Revenue (approx)</label>
-                        <select id="revenue" name="revenue" required>
-                            <option value="">-- Select --</option>
-                            <option value="0-250k">Under $250k</option>
-                            <option value="250k-1m">$250k–$1M</option>
-                            <option value="1m-5m">$1M–$5M</option>
-                            <option value="5m-10m">$5M–$10M</option>
-                            <option value="10m+">$10M+</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="interest">What interests you most?</label>
-                        <select id="interest" name="interest" required>
-                            <option value="">-- Select --</option>
-                            <option value="audit">AI Audit & Roadmap</option>
-                            <option value="implementation">90-Day Implementation</option>
-                            <option value="support">Ongoing Support</option>
-                            <option value="unsure">Not sure yet</option>
-                        </select>
-                    </div>
-
-                    <div class="checkbox-group">
-                        <label>
-                            <input type="checkbox" name="subscribe" value="yes"> Subscribe to occasional updates (no spam, I promise)
-                        </label>
-                    </div>
-
-                    <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 15px;">Get the Playbook</button>
-                    <p style="margin-top: 12px; font-size: 0.8rem; color: #94a3b8;">We'll send you the playbook immediately, then reach out about next steps if you're interested.</p>
-                </form>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer>
+    <!-- Service Section -->
+    <section id="service" class="service-section">
         <div class="container">
-            <p>&copy; 2026 How to Hire an AI. Built by operators, for operators.</p>
-            <p style="margin-top: 10px; font-size: 0.85rem;">
-                <a href="mailto:caglar@caglaroner.com" style="color: #94a3b8; text-decoration: none;">caglar@caglaroner.com</a> | 
-                <a href="#" style="color: #94a3b8; text-decoration: none;">Privacy</a>
+            <h3>Beyond the Playbook: Expert Training & Setup</h3>
+            <p class="section-subtitle">Get hands-on guidance from AI hiring experts</p>
+            
+            <div class="service-grid">
+                <div class="service-card">
+                    <div class="service-icon">🎓</div>
+                    <h4>Guided Training Program</h4>
+                    <p>3-week intensive workshop where we customize the playbook for your org, run mock interviews, and build your hiring strategy together.</p>
+                    <ul class="service-list">
+                        <li>Customized hiring plan for your company</li>
+                        <li>Weekly training sessions (3 hours/week)</li>
+                        <li>Mock interviews with your team</li>
+                        <li>Q&A with AI hiring veterans</li>
+                        <li>Bonus: Sourcing channel partnerships</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">🔧</div>
+                    <h4>Setup & Execution Service</h4>
+                    <p>We handle the heavy lifting. Our team sources candidates, runs initial screening, and prepares your team for final rounds.</p>
+                    <ul class="service-list">
+                        <li>Full hiring funnel setup</li>
+                        <li>Candidate sourcing (10-15 qualified leads)</li>
+                        <li>Initial screening & assessment</li>
+                        <li>Interview prep for your team</li>
+                        <li>Offer negotiation support</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">📈</div>
+                    <h4>Retention & Growth Coaching</h4>
+                    <p>30-day post-hire coaching to ensure your new AI talent ramps fast, stays engaged, and becomes a force multiplier.</p>
+                    <ul class="service-list">
+                        <li>90-day onboarding execution</li>
+                        <li>Weekly check-ins with new hire</li>
+                        <li>Manager coaching (1:1s, feedback)</li>
+                        <li>Team integration workshops</li>
+                        <li>Retention strategy for year 1</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="pricing-note">
+                <p>Custom pricing based on package and your team size. Schedule a call to discuss your specific needs.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Signup Section -->
+    <section id="signup" class="signup-section">
+        <div class="container">
+            <h3>Get the Playbook + Start Your AI Hiring Journey</h3>
+            <p class="section-subtitle">Free guide download + exclusive access to training options</p>
+            
+            <form class="signup-form" id="signupForm">
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" required placeholder="John Doe">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Work Email</label>
+                    <input type="email" id="email" name="email" required placeholder="you@company.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="company">Company</label>
+                    <input type="text" id="company" name="company" required placeholder="Your Company">
+                </div>
+
+                <div class="form-group">
+                    <label for="role">Your Role</label>
+                    <select id="role" name="role" required>
+                        <option value="">Select a role</option>
+                        <option value="founder">Founder/CEO</option>
+                        <option value="cto">CTO/VP Engineering</option>
+                        <option value="hr">HR/People Lead</option>
+                        <option value="hiring-manager">Hiring Manager</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="team-size">Team Size</label>
+                    <select id="team-size" name="team-size" required>
+                        <option value="">Select team size</option>
+                        <option value="1-10">1-10 people</option>
+                        <option value="11-50">11-50 people</option>
+                        <option value="51-200">51-200 people</option>
+                        <option value="200+">200+ people</option>
+                    </select>
+                </div>
+
+                <div class="form-group checkbox">
+                    <input type="checkbox" id="training-interest" name="training-interest">
+                    <label for="training-interest">I'm interested in the training + setup service (optional)</label>
+                </div>
+
+                <div class="form-group checkbox">
+                    <input type="checkbox" id="terms" name="terms" required>
+                    <label for="terms">I agree to receive updates about the playbook and training options</label>
+                </div>
+
+                <button type="submit" class="cta-button primary full-width">Download Guide + Sign Up</button>
+
+                <p class="form-note">By signing up, you'll get immediate access to the guide preview and info about our training programs. Unsubscribe anytime.</p>
+            </form>
+
+            <div id="successMessage" class="success-message" style="display: none;">
+                <h4>✅ You're all set!</h4>
+                <p>Check your email for the guide preview. We'll follow up with training options and resources.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 How to Hire an AI. Built for founders, CTOs, and hiring managers serious about AI talent.</p>
+            <p class="footer-links">
+                <a href="#playbook">Playbook</a> | 
+                <a href="#guide-preview">Guide Preview</a> | 
+                <a href="#service">Training</a> | 
+                <a href="mailto:hello@hireaiai.com">Contact</a>
             </p>
         </div>
     </footer>
 
-    <script>
-        function scrollToForm(service) {
-            const form = document.getElementById('signupForm');
-            const interestSelect = document.getElementById('interest');
-            const serviceMap = {
-                'audit': 'audit',
-                'implementation': 'implementation',
-                'support': 'support'
-            };
-            interestSelect.value = serviceMap[service] || '';
-            form.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            document.getElementById('email').focus();
-        }
-
-        function handleFormSubmit(event) {
-            event.preventDefault();
-            
-            // Get form data
-            const formData = {
-                firstName: document.getElementById('firstName').value,
-                email: document.getElementById('email').value,
-                company: document.getElementById('company').value,
-                revenue: document.getElementById('revenue').value,
-                interest: document.getElementById('interest').value,
-                subscribe: document.querySelector('input[name="subscribe"]').checked,
-                timestamp: new Date().toISOString()
-            };
-
-            // Log to console (in production, send to backend/email service)
-            console.log('Form submitted:', formData);
-            
-            // Show success message
-            const form = document.getElementById('signupForm');
-            const message = document.createElement('div');
-            message.style.cssText = 'background: #10b981; color: white; padding: 15px; border-radius: 4px; margin-bottom: 15px; text-align: center;';
-            message.innerHTML = '<strong>✓ Check your email!</strong> We\'ve sent you the playbook + next steps.';
-            form.insertBefore(message, form.firstChild);
-            
-            // Reset form
-            form.reset();
-            
-            // Hide success message after 5 seconds
-            setTimeout(() => {
-                message.remove();
-            }, 5000);
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
