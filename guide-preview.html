@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Hire an AI - Quick Start Guide</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.5;
+            color: #1a1a1a;
+            background: white;
+            padding: 40px 20px;
+        }
+
+        .guide-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 30px;
+            border-bottom: 2px solid #e2e8f0;
+        }
+
+        .header h1 {
+            font-size: 2rem;
+            margin-bottom: 5px;
+            color: #0f172a;
+        }
+
+        .header p {
+            color: #64748b;
+            font-size: 1rem;
+        }
+
+        h2 {
+            font-size: 1.3rem;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            color: #0f172a;
+            border-left: 4px solid #3b82f6;
+            padding-left: 15px;
+        }
+
+        h3 {
+            font-size: 1.05rem;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            color: #1e293b;
+            font-weight: 600;
+        }
+
+        p {
+            margin-bottom: 12px;
+            color: #475569;
+            line-height: 1.6;
+        }
+
+        ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+            color: #475569;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .checklist {
+            background: #f0f9ff;
+            border: 1px solid #bfdbfe;
+            border-radius: 6px;
+            padding: 20px;
+            margin: 15px 0;
+        }
+
+        .checklist-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 10px;
+        }
+
+        .checklist-item input[type="checkbox"] {
+            margin-right: 10px;
+            margin-top: 2px;
+            width: 18px;
+            height: 18px;
+            cursor: pointer;
+        }
+
+        .checklist-item label {
+            cursor: pointer;
+            flex: 1;
+            color: #475569;
+        }
+
+        .decision-tree {
+            background: #f8fafc;
+            border-left: 4px solid #f59e0b;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+
+        .decision-tree strong {
+            color: #0f172a;
+        }
+
+        .table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            font-size: 0.9rem;
+        }
+
+        .table th {
+            background: #0f172a;
+            color: white;
+            padding: 12px;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        .table td {
+            border-bottom: 1px solid #e2e8f0;
+            padding: 12px;
+            color: #475569;
+        }
+
+        .table tr:hover {
+            background: #f9fafb;
+        }
+
+        .highlight-box {
+            background: #fef3c7;
+            border-left: 4px solid #f59e0b;
+            padding: 15px;
+            border-radius: 4px;
+            margin: 15px 0;
+        }
+
+        .page-break {
+            page-break-after: always;
+            margin: 40px 0;
+            padding-bottom: 40px;
+            border-bottom: 2px dashed #e2e8f0;
+        }
+
+        .footer {
+            text-align: center;
+            color: #94a3b8;
+            font-size: 0.85rem;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        .print-btn {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .print-btn button {
+            background: #3b82f6;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        .print-btn button:hover {
+            background: #2563eb;
+        }
+
+        @media print {
+            .print-btn {
+                display: none;
+            }
+            body {
+                padding: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="guide-container">
+        <div class="print-btn">
+            <button onclick="window.print()">📥 Print or Save as PDF</button>
+        </div>
+
+        <!-- PAGE 1 -->
+        <div class="header">
+            <h1>How to Hire an AI</h1>
+            <p>Quick Start Guide: The 5-Minute Audit Checklist</p>
+        </div>
+
+        <h2>1. Workflow Audit: What Should You Automate?</h2>
+        <p>Not every task is worth automating. Focus on repetitive work that doesn't require judgment. Use this checklist:</p>
+
+        <div class="checklist">
+            <div class="checklist-item">
+                <input type="checkbox" id="item1">
+                <label for="item1"><strong>Time Sink:</strong> Does this task take >2 hours/week of someone's time?</label>
+            </div>
+            <div class="checklist-item">
+                <input type="checkbox" id="item2">
+                <label for="item2"><strong>Repetitive:</strong> Is the pattern the same each time (even if data changes)?</label>
+            </div>
+            <div class="checklist-item">
+                <input type="checkbox" id="item3">
+                <label for="item3"><strong>Low-Judgment:</strong> Does it mostly follow rules (not require creativity)?</label>
+            </div>
+            <div class="checklist-item">
+                <input type="checkbox" id="item4">
+                <label for="item4"><strong>Impact:</strong> Does freeing up time here help revenue, margin, or team morale?</label>
+            </div>
+            <div class="checklist-item">
+                <input type="checkbox" id="item5">
+                <label for="item5"><strong>Low Risk:</strong> If it goes wrong, can you catch it before customers notice?</label>
+            </div>
+        </div>
+
+        <h3>5 Workflows Worth Automating (Most Common)</h3>
+        <ul>
+            <li><strong>Customer Support Triage:</strong> Categorize incoming emails/messages → route to right team</li>
+            <li><strong>Data Entry & Processing:</strong> Extract info from documents, PDFs, or emails → populate systems</li>
+            <li><strong>Content Summarization:</strong> Digest long articles, docs, or transcripts → quick summaries</li>
+            <li><strong>Lead Qualification:</strong> Analyze inbound leads → score + route to sales</li>
+            <li><strong>Reporting & Analytics:</strong> Pull data from multiple sources → weekly/monthly reports</li>
+        </ul>
+
+        <h2>2. Decision Tree: Pick Your Tool</h2>
+        <p><strong>Start here:</strong> What kind of task is it?</p>
+
+        <div class="decision-tree">
+            <strong>Q: Is it a simple prompt (ask AI a question, get text back)?</strong><br>
+            → Yes: Use <strong>ChatGPT, Claude, or Perplexity</strong> ($0–$20/mo)<br>
+            → No: Continue below.
+        </div>
+
+        <div class="decision-tree">
+            <strong>Q: Does it involve multiple apps (email → spreadsheet → Slack)?</strong><br>
+            → Yes: Use <strong>Zapier or Make</strong> ($15–100/mo) — no coding needed<br>
+            → No: Continue below.
+        </div>
+
+        <div class="decision-tree">
+            <strong>Q: Do you have unique business logic no tool supports?</strong><br>
+            → Yes: <strong>Custom build</strong> with an engineer ($$$ but powerful)<br>
+            → No: Use a productized AI service (Typeform, Intercom, Slack Workflows, etc.)
+        </div>
+
+        <div class="highlight-box">
+            <strong>🎯 Rule of Thumb:</strong> Start with the cheapest option that works. You can always upgrade later. Most tasks are 80% solved by ChatGPT + Zapier for under $50/month.
+        </div>
+
+        <div class="page-break"></div>
+
+        <!-- PAGE 2 -->
+        <h2>3. Implementation Roadmap Template</h2>
+        <p>Pick one workflow. Run this 4-week cycle:</p>
+
+        <table class="table">
+            <tr>
+                <th>Week</th>
+                <th>What to Do</th>
+                <th>Success Looks Like</th>
+            </tr>
+            <tr>
+                <td><strong>Week 1</strong></td>
+                <td>Set up the tool + test with sample data</td>
+                <td>Tool is connected to your data; test workflow runs 1x without errors</td>
+            </tr>
+            <tr>
+                <td><strong>Week 2</strong></td>
+                <td>Run in parallel (AI does the task, human verifies)</td>
+                <td>Human spot-checks don't find issues; AI is ~90% accurate</td>
+            </tr>
+            <tr>
+                <td><strong>Week 3–4</strong></td>
+                <td>Hand off to team; document playbook</td>
+                <td>Someone else can run it without you; team knows what to do</td>
+            </tr>
+        </table>
+
+        <h2>4. Measurement Framework</h2>
+        <p>Before you automate, decide what "success" looks like. Track these metrics:</p>
+
+        <ul>
+            <li><strong>Time Saved:</strong> How many hours/week does this free up? (hrs × hourly cost = ROI)</li>
+            <li><strong>Error Reduction:</strong> Did mistakes go down? By how much?</li>
+            <li><strong>Customer Impact:</strong> Did response time improve? Did NPS change?</li>
+            <li><strong>Cost:</strong> Tool + setup + your time. Should pay back in <3 months.</li>
+        </ul>
+
+        <div class="checklist">
+            <div style="margin-bottom: 10px;">
+                <strong>📊 Sample Metrics (Before & After)</strong>
+            </div>
+            <div class="checklist-item">
+                <input type="checkbox" id="metric1">
+                <label for="metric1"><strong>Support emails processed/day:</strong> [Before: ___] → [After: ___]</label>
+            </div>
+            <div class="checklist-item">
+                <input type="checkbox" id="metric2">
+                <label for="metric2"><strong>Data entry errors/week:</strong> [Before: ___] → [After: ___]</label>
+            </div>
+            <div class="checklist-item">
+                <input type="checkbox" id="metric3">
+                <label for="metric3"><strong>Time spent on task/week:</strong> [Before: ___] → [After: ___]</label>
+            </div>
+            <div class="checklist-item">
+                <input type="checkbox" id="metric4">
+                <label for="metric4"><strong>Team morale:** Does the team feel less burned out?</label>
+            </div>
+        </div>
+
+        <h2>5. Common Pitfalls (Don't Do These)</h2>
+        <ul>
+            <li>❌ <strong>Automating the wrong thing:</strong> Pick high-impact, low-judgment tasks first. Skip "nice to have" for now.</li>
+            <li>❌ <strong>Going all-in day one:</strong> Test with 10% of data first. Parallel-run for a week.</li>
+            <li>❌ <strong>Forgetting to document:</strong> Write down how it works. Future-you (and your team) will thank you.</li>
+            <li>❌ <strong>Skipping error handling:</strong> Plan for "what if the AI gets this wrong?" → human review step.</li>
+            <li>❌ <strong>Not measuring:</strong> If you can't prove ROI, you won't keep using it.</li>
+        </ul>
+
+        <h2>Next Steps</h2>
+        <p><strong>Now that you have the framework, you have two options:</strong></p>
+
+        <div class="highlight-box">
+            <strong>Option 1: DIY</strong><br>
+            Pick a workflow, find a tool, and implement it yourself. Totally doable for simple cases.
+        </div>
+
+        <div class="highlight-box">
+            <strong>Option 2: Get Help</strong><br>
+            Book a 1-hour audit call. We'll show you exactly where to focus and get you unstuck.
+        </div>
+
+        <div class="footer">
+            <p><strong>Questions?</strong> Email caglar@caglaroner.com or visit www.howtoHireai.com</p>
+            <p>© 2026 How to Hire an AI. Built by operators, for operators.</p>
+        </div>
+    </div>
+</body>
+</html>
