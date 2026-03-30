@@ -1,0 +1,30 @@
+{
+  "entries": [
+    {
+      "email": "alice@example.com",
+      "company": "TechCorp",
+      "useCase": "We want to automate our customer service workflows with AI agents",
+      "timestamp": "2026-03-16T03:04:45.176Z",
+      "source": "landing-page"
+    },
+    {
+      "email": "bob@startup.io",
+      "company": "StartupXYZ",
+      "useCase": "Automating data processing and report generation tasks",
+      "timestamp": "2026-03-16T03:04:45.176Z",
+      "source": "landing-page"
+    },
+    {
+      "email": "carol@enterprise.com",
+      "company": "",
+      "useCase": "We need intelligent automation for our complex business processes",
+      "timestamp": "2026-03-16T03:04:45.176Z",
+      "source": "landing-page"
+    }
+  ],
+  "metadata": {
+    "created": "2024-03-16T03:00:00Z",
+    "updated": "2026-03-16T03:04:45.177Z",
+    "totalEntries": 3
+  }
+}
